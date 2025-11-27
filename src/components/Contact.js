@@ -46,13 +46,13 @@ const Contact = () => {
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
-      value: 'San Francisco Bay Area, CA',
+      value: 'Austin, TX USA',
       href: '#',
     },
   ];
 
   const socials = [
-    { icon: FaLinkedin, href: '#', label: 'LinkedIn', color: '#0A66C2' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/singhgurpinder09/', label: 'LinkedIn', color: '#0A66C2' },
     { icon: FaGithub, href: '#', label: 'GitHub', color: '#333333' },
     { icon: FaTwitter, href: '#', label: 'Twitter', color: '#1DA1F2' },
   ];

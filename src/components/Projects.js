@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaNode, FaDatabase, FaEye, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import ProjectImage from './ProjectImage';
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -172,12 +173,8 @@ const Projects = () => {
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden bg-gray-200">
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  whileHover={{ scale: 1.1 }}
-                />
+                {/* ProjectImage component renders a variant-based SVG illustration */}
+                <ProjectImage variant={project.id} title={project.title} className="group-hover:scale-105" />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <motion.a
                     href={project.links.github}

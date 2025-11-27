@@ -34,7 +34,7 @@ export const portfolioConfig = {
   socials: [
     {
       platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourprofile',
+      url: 'https://www.linkedin.com/in/singhgurpinder09/',
       icon: 'FaLinkedin',
     },
     {

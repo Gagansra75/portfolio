@@ -40,11 +40,36 @@ const About = () => {
               className="relative z-10 rounded-2xl overflow-hidden shadow-2xl"
               whileHover={{ scale: 1.05 }}
             >
-              <img
-                src="/img/mypic.JPG"
-                alt="Gurpinder Singh"
-                className="w-full h-96 object-cover"
-              />
+              {/* Inline SVG coding illustration used instead of external image */}
+              <div
+                role="img"
+                aria-label="Coding illustration"
+                className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800"
+              >
+                <svg
+                  viewBox="0 0 64 64"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-48 h-48 text-white"
+                  aria-hidden="false"
+                >
+                  <rect x="6" y="8" width="52" height="34" rx="3" fill="currentColor" opacity="0.12" />
+                  <rect x="10" y="12" width="44" height="26" rx="2" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.9" />
+
+                  {/* code lines */}
+                  <rect x="16" y="20" width="6" height="2" rx="1" fill="currentColor" />
+                  <rect x="24" y="20" width="18" height="2" rx="1" fill="currentColor" />
+                  <rect x="16" y="24" width="6" height="2" rx="1" fill="currentColor" />
+                  <rect x="24" y="24" width="18" height="2" rx="1" fill="currentColor" />
+
+                  {/* chevrons to indicate code symbols */}
+                  <path d="M40 18 L36 22 L40 26" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M48 18 L44 22 L48 26" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+
+                  {/* base / stand */}
+                  <rect x="18" y="44" width="28" height="4" rx="1" fill="currentColor" opacity="0.12" />
+                  <rect x="26" y="48" width="12" height="2" rx="1" fill="currentColor" />
+                </svg>
+              </div>
             </motion.div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl -z-10 opacity-20"></div>
           </motion.div>
