@@ -6,7 +6,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Navjot Bhangu',
+      name: 'Peter Johnson',
       role: 'Product Manager at Tesla',
       image: '/img/mypic.JPG',
       text: 'Gurpinder delivered exceptional React components that significantly improved our application performance. His attention to detail and modern coding practices are outstanding.',
