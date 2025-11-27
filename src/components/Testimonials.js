@@ -6,7 +6,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Sarah Johnson',
+      name: 'Navjot Bhangu',
       role: 'Product Manager at Tesla',
       image: '/img/mypic.JPG',
       text: 'Gurpinder delivered exceptional React components that significantly improved our application performance. His attention to detail and modern coding practices are outstanding.',
@@ -22,7 +22,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      name: 'Emma Davis',
+      name: 'Harman Sra',
       role: 'Founder at GloomySkin',
       image: '/img/mypic.JPG',
       text: 'Gurpinder transformed our vision into a beautiful, responsive website. His communication and technical skills made the entire process seamless and enjoyable.',
@@ -99,9 +99,10 @@ const Testimonials = () => {
               {/* Author */}
               <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
                 <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
+                //Add image for testimonial author if needed//
+                // src={testimonial.image}
+                // alt={testimonial.name}
+                // className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
                   <p className="font-bold text-gray-900">{testimonial.name}</p>

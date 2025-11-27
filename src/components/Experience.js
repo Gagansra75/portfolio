@@ -5,9 +5,25 @@ import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 const Experience = () => {
   const experiences = [
     {
+      company: 'Apple',
+      position: 'Infrastructure System Engineer',
+      period: 'Apr 2025 - Present',
+      location: 'Austin, Texas, United States',
+      description:
+        'Infrastructure System Engineer on contract basis, working in hybrid capacity. Managing and optimizing infrastructure systems and ensuring robust system performance.',
+      achievements: [
+        'Designed and implemented scalable infrastructure solutions',
+        'Optimized system performance and reliability',
+        'Collaborated with cross-functional teams on infrastructure projects',
+        'Monitored and maintained system health and security',
+        'Implemented best practices for system administration',
+        'Working on a project that will save 5 million dollars monthly for Apple',
+      ],
+    },
+    {
       company: 'Tesla',
       position: 'React Developer',
-      period: '11/2023 - Current',
+      period: '11/2023 - 04/2025',
       location: 'Fremont, CA',
       description:
         'Working with cross-functional teams on Tesla Retail Tool & FindUs applications. Developed reusable components and optimized application performance.',

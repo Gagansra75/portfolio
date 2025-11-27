@@ -4,6 +4,41 @@ import { FaReact, FaNode, FaPython, FaDatabase, FaAws, FaGit } from 'react-icons
 import { SiTypescript, SiRedux, SiTailwindcss } from 'react-icons/si';
 
 const Skills = () => {
+  const additionalSkillsData = [
+    {
+      name: 'REST APIs',
+      description: 'Designing and consuming RESTful web services for seamless data integration and backend communication.',
+    },
+    {
+      name: 'GraphQL',
+      description: 'Query language for APIs enabling efficient data fetching and real-time applications.',
+    },
+    {
+      name: 'Docker',
+      description: 'Containerization platform for deploying consistent environments across development and production.',
+    },
+    {
+      name: 'Webpack',
+      description: 'Module bundler for JavaScript applications, optimizing code splitting and asset management.',
+    },
+    {
+      name: 'Agile/Scrum',
+      description: 'Agile methodology and Scrum framework for iterative development and team collaboration.',
+    },
+    {
+      name: 'UI/UX Design',
+      description: 'Creating intuitive interfaces and enhancing user experiences through design principles.',
+    },
+    {
+      name: 'Performance Optimization',
+      description: 'Optimizing application speed, bundle size, and rendering performance for better user experience.',
+    },
+    {
+      name: 'Testing (Jest)',
+      description: 'JavaScript testing framework for unit testing, snapshot testing, and ensuring code reliability.',
+    },
+  ];
+
   const skillCategories = [
     {
       title: 'Frontend',
@@ -136,13 +171,22 @@ const Skills = () => {
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Also Experienced With</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['REST APIs', 'GraphQL', 'Docker', 'Webpack', 'Agile/Scrum', 'UI/UX Design', 'Performance Optimization', 'Testing (Jest)'].map((skill, index) => (
+            {additionalSkillsData.map((skill, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg p-4 text-center border-2 border-blue-200 hover:border-blue-500 transition-all"
+                className="relative group"
                 whileHover={{ scale: 1.05 }}
               >
-                <p className="font-semibold text-gray-900">{skill}</p>
+                <div className="bg-white rounded-lg p-4 text-center border-2 border-blue-200 group-hover:border-blue-500 transition-all cursor-pointer">
+                  <p className="font-semibold text-gray-900">{skill.name}</p>
+                </div>
+                {/* Tooltip */}
+                <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-48 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
+                  <div className="bg-gray-900 text-white text-sm rounded-lg p-3 shadow-lg">
+                    <p className="leading-relaxed">{skill.description}</p>
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full w-2 h-2 bg-gray-900 transform rotate-45"></div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
