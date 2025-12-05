@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaNode, FaPython, FaDatabase, FaAws, FaGit } from 'react-icons/fa';
 import { SiTypescript, SiRedux, SiTailwindcss } from 'react-icons/si';
+import ScrollReveal from './ScrollReveal';
 
 const Skills = () => {
   const additionalSkillsData = [
@@ -89,23 +90,25 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 md:py-32 px-4 md:px-6 bg-white">
+    <section id="skills" className="py-20 md:py-32 px-4 md:px-6 bg-white dark:bg-gray-900 transition-colors">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <p className="text-blue-600 font-semibold text-lg mb-2 uppercase tracking-wider">My Toolkit</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Technical Skills
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            A comprehensive overview of my proficiency across various technologies and frameworks
-          </p>
-        </motion.div>
+        <ScrollReveal animation="blurUp" duration={0.8}>
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-2 uppercase tracking-wider">My Toolkit</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Technical Skills
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              A comprehensive overview of my proficiency across various technologies and frameworks
+            </p>
+          </motion.div>
+        </ScrollReveal>
 
         <motion.div
           className="grid md:grid-cols-3 gap-12"
