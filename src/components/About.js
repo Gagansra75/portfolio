@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ScrollReveal from './ScrollReveal';
 
 const About = () => {
   const containerVariants = {
@@ -22,7 +23,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 md:py-32 px-4 md:px-6 bg-gray-50">
+    <section id="about" className="py-20 md:py-32 px-4 md:px-6 bg-gray-50 dark:bg-gray-800 transition-colors">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="grid md:grid-cols-2 gap-12 items-center"
@@ -32,10 +33,11 @@ const About = () => {
           viewport={{ once: true }}
         >
           {/* Image */}
-          <motion.div
-            className="relative"
-            variants={itemVariants}
-          >
+          <ScrollReveal animation="blurUp" duration={0.8}>
+            <motion.div
+              className="relative"
+              variants={itemVariants}
+            >
             <motion.div
               className="relative z-10 rounded-2xl overflow-hidden shadow-2xl"
               whileHover={{ scale: 1.05 }}
@@ -73,24 +75,26 @@ const About = () => {
             </motion.div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl -z-10 opacity-20"></div>
           </motion.div>
+          </ScrollReveal>
 
           {/* Content */}
+          <ScrollReveal animation="blurUp" duration={0.8} delay={0.2}>
           <motion.div variants={containerVariants}>
             <motion.p
-              className="text-blue-600 font-semibold text-lg mb-2 uppercase tracking-wider"
+              className="text-blue-600 font-semibold text-lg mb-2 uppercase tracking-wider dark:text-blue-400"
               variants={itemVariants}
             >
               About Me
             </motion.p>
             
             <motion.h2
-              className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+              className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
               variants={itemVariants}
             >
               Frontend Developer & Tech Enthusiast
             </motion.h2>
 
-            <motion.div className="space-y-4 text-gray-700 text-lg" variants={containerVariants}>
+            <motion.div className="space-y-4 text-gray-700 dark:text-gray-300 text-lg" variants={containerVariants}>
               <motion.p variants={itemVariants} className="leading-relaxed">
                 I'm a skilled Frontend Developer with 8+ years of experience building responsive web applications and user-friendly interfaces. I specialize in modern web technologies and love creating elegant solutions to complex problems.
               </motion.p>
@@ -126,6 +130,7 @@ const About = () => {
               </motion.a>
             </motion.div>
           </motion.div>
+          </ScrollReveal>
         </motion.div>
       </div>
     </section>
